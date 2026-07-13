@@ -21,7 +21,7 @@ cd backend
 ## Test the health endpoint
 
 ```bash
-curl http://localhost:8080/health
+curl http://localhost:8081/health
 ```
 
 Expected response:
@@ -37,8 +37,8 @@ Expected response:
 
 When running in dev mode, the API documentation is available at:
 
-- Swagger UI: http://localhost:8080/q/swagger-ui
-- OpenAPI JSON: http://localhost:8080/q/openapi
+- Swagger UI: http://localhost:8081/q/swagger-ui
+- OpenAPI JSON: http://localhost:8081/q/openapi
 
 ## Package structure
 

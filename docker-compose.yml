@@ -6,7 +6,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "8080:8081"
     environment:
       QUARKUS_DATASOURCE_USERNAME: georisk
       QUARKUS_DATASOURCE_PASSWORD: georisk
