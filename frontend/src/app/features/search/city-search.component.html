@@ -1,0 +1,15 @@
+<form class="search" (ngSubmit)="submitSearch()">
+  <span class="search-icon" aria-hidden="true"></span>
+  <input
+    type="search"
+    [formControl]="searchControl"
+    placeholder="Search Cluj-Napoca or nearby cities"
+    aria-label="Search city"
+    autocomplete="off"
+  />
+  <button type="submit">Search</button>
+
+  @if (noMatch) {
+    <span class="search-message">Try Cluj-Napoca, Florești, Baciu or Apahida.</span>
+  }
+</form>

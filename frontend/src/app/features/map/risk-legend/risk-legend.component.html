@@ -1,0 +1,10 @@
+<aside class="legend" aria-label="Risk level legend">
+  <span class="legend-title">Risk level</span>
+  @for (item of items; track item.level) {
+    <div class="legend-item">
+      <span class="swatch" [style.background]="item.color"></span>
+      <strong>{{ item.level }}</strong>
+      <small>{{ item.range }}</small>
+    </div>
+  }
+</aside>

@@ -1,0 +1,61 @@
+<aside class="details-panel" aria-live="polite">
+  @if (riskCell; as cell) {
+    <div class="panel-heading">
+      <span class="eyebrow">Selected risk cell</span>
+      <h2>{{ cell.name }}</h2>
+      <p>Cluj-Napoca · {{ cell.id }}</p>
+    </div>
+
+    <section class="score-card" [class]="levelClass(cell.level)">
+      <div class="score-ring" [style.--score]="cell.score">
+        <strong>{{ cell.score }}</strong>
+        <span>/ 100</span>
+      </div>
+      <div>
+        <span class="score-label">Composite score</span>
+        <strong class="level-label">{{ cell.level }}</strong>
+      </div>
+    </section>
+
+    <section class="details-section">
+      <span class="section-title">Assessment summary</span>
+      <p class="summary">{{ cell.summary }}</p>
+    </section>
+
+    <section class="details-section factors-section">
+      <span class="section-title">Contributing factors</span>
+      <div class="factor-list">
+        @for (factor of cell.factors; track factor.label) {
+          <div class="factor">
+            <span>{{ factor.label }}</span>
+            <strong>{{ factor.value }}</strong>
+          </div>
+        }
+      </div>
+    </section>
+
+    <div class="data-note">
+      <span aria-hidden="true">i</span>
+      This assessment uses visual mock data. No backend request was made.
+    </div>
+  } @else {
+    <div class="empty-state">
+      <div class="empty-visual" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span class="eyebrow">Risk details</span>
+      <h2>Select a map cell</h2>
+      <p>Choose one of the colored areas to inspect its risk score, summary and local factors.</p>
+      <div class="empty-guide">
+        <span>01</span>
+        <p>Explore the Cluj-Napoca map</p>
+        <span>02</span>
+        <p>Click any risk polygon</p>
+        <span>03</span>
+        <p>Review its assessment here</p>
+      </div>
+    </div>
+  }
+</aside>

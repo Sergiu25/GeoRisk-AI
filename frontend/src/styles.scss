@@ -1,0 +1,53 @@
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --font-body: 'Aptos', 'Segoe UI', Arial, sans-serif;
+  --font-display: 'Aptos Display', 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font-body);
+  color-scheme: light;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: #f3f5f2;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.leaflet-control-zoom a {
+  color: #264737;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px;
+}
+
+.risk-tooltip {
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 9px;
+  box-shadow: 0 6px 16px rgba(25, 41, 32, 0.18);
+  color: #23352b;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.risk-tooltip::before {
+  display: none;
+}

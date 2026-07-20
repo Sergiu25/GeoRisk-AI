@@ -1,0 +1,157 @@
+# Java Build Artifacts
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# Maven
+.m2/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Gradle
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+gradle.properties
+
+# Node.js / npm / React / Vue
+node_modules/
+npm-debug.log
+npm-error.log
+yarn-error.log
+yarn.lock
+dist/
+build/
+.next/
+
+# Python / Virtual Environment / Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+*.egg
+dist/
+build/
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-settings
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+.directory
+
+# Docker
+.docker/
+docker-compose.override.yml
+.dockerignore
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+postgres/
+mysql/
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# OS-specific
+.windows/
+.macos/
+.linux/
+
+# Application Secrets (CRITICAL - never commit these)
+secrets/
+*.pem
+*.key
+*.keystore
+*.jks
+private/
+
+# Test Coverage
+coverage/
+.nyc_output/
+
+# IDE Run/Debug Configurations
+.run/
+.idea/runConfigurations/
+
+# MacOS Extended Attributes
+.TemporaryItems
+
+# Windows Shortcuts
+*.lnk
+
+# Git
+.git/
+
+# Misc
+.venv/
+.env
+.envrc
+*.orig

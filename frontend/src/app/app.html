@@ -1,0 +1,53 @@
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand" aria-label="GeoRisk AI home">
+      <span class="brand-mark" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div>
+        <h1>GeoRisk AI</h1>
+        <p>Urban risk intelligence</p>
+      </div>
+    </div>
+
+    <app-city-search (citySelected)="selectCity($event)" />
+
+    <div class="environment-badge">
+      <span></span>
+      Mock data
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="map-section" aria-labelledby="map-heading">
+      <div class="map-context">
+        <div>
+          <span class="eyebrow">Live overview</span>
+          <h2 id="map-heading">{{ activeCity() }} risk map</h2>
+        </div>
+        <div class="cell-count">
+          <strong>{{ riskCells.length }}</strong>
+          <span>monitored cells</span>
+        </div>
+      </div>
+
+      <div class="map-frame">
+        <app-risk-map
+          [riskCells]="riskCells"
+          [selectedCellId]="selectedCell()?.id ?? null"
+          [center]="mapCenter()"
+          (cellSelected)="selectCell($event)"
+        />
+        <app-risk-legend />
+        <div class="map-hint">
+          <span aria-hidden="true">↖</span>
+          Select a cell to inspect local risk
+        </div>
+      </div>
+    </section>
+
+    <app-risk-details-panel [riskCell]="selectedCell()" />
+  </main>
+</div>
